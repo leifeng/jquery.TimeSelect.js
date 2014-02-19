@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery.TimeSelect.js"></script>
+</head>
+<body>
+<div id="time"></div>
+<div id="time2"></div>
+<script>
+    var myDate = new Date();
+    var today = myDate.getDay() - 0;
+    $("#time").TS({
+        selectDay: today,
+        callback: function (data) {
+            alert(data);
+        }});
+    $("#time2").TS({
+        selectDay: today+1,
+        callback: function (data) {
+            alert(data);
+        }});
+</script>
+</body>
+</html>
